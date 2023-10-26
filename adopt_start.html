@@ -98,9 +98,9 @@
             </div>
             <div id="adoptHamsterHouse">
               <div id="hamsterSelected" class="hamsterSelected1"></div>
-              <img src="https://jbart.joybomb.com.tw/html/nu3/20231004_adopt/assets/images/adopt_light_l_bg.png" class="hamsterLightL hamsterLight">
-              <img src="https://jbart.joybomb.com.tw/html/nu3/20231004_adopt/assets/images/adopt_light_r_bg.png" class="hamsterLightR hamsterLight">
-              <img class="adoptBot" src="https://jbart.joybomb.com.tw/html/nu3/20231004_adopt/assets/images/adopt_p_house.png" alt="">
+              <img src="assets/images/adopt_light_l_bg.png" class="hamsterLightL hamsterLight">
+              <img src="assets/images/adopt_light_r_bg.png" class="hamsterLightR hamsterLight">
+              <img class="adoptBot" src="assets/images/adopt_p_house.png" alt="">
             </div>
             <div class="btnBox">
               <ul id="stepButtonWrap">
@@ -113,10 +113,10 @@
               <img src="https://jbart.joybomb.com.tw/html/nu3/20231004_adopt/assets/images/adopt_p_step_1_txt.png">
             </div>
             <div id="adoptHamsterRole">
-              <div id="hamsterChoice1" class="role" onclick="changeHamsterRole(1)"><img src="https://jbart.joybomb.com.tw/html/nu3/20231004_adopt/assets/images/adopt_p_hamster_1.png" class="rolePic"></div>
-              <div id="hamsterChoice2" class="role" onclick="changeHamsterRole(2)"><img src="https://jbart.joybomb.com.tw/html/nu3/20231004_adopt/assets/images/adopt_p_hamster_2.png" class="rolePic"></div>
-              <div id="hamsterChoice3" class="role" onclick="changeHamsterRole(3)"><img src="https://jbart.joybomb.com.tw/html/nu3/20231004_adopt/assets/images/adopt_p_hamster_3.png" class="rolePic"></div>
-              <div id="hamsterChoice4" class="role" onclick="changeHamsterRole(4)"><img src="https://jbart.joybomb.com.tw/html/nu3/20231004_adopt/assets/images/adopt_p_hamster_4.png" class="rolePic"></div>
+              <div id="hamsterChoice1" class="role" onclick="changeHamsterRole(1)"><img src="assets/images/adopt_p_hamster_1.png" class="rolePic"></div>
+              <div id="hamsterChoice2" class="role" onclick="changeHamsterRole(2)"><img src="assets/images/adopt_p_hamster_2.png" class="rolePic"></div>
+              <div id="hamsterChoice3" class="role" onclick="changeHamsterRole(3)"><img src="assets/images/adopt_p_hamster_3.png" class="rolePic"></div>
+              <div id="hamsterChoice4" class="role" onclick="changeHamsterRole(4)"><img src="assets/images/adopt_p_hamster_4.png" class="rolePic"></div>
             </div>
           </div>
           <div class="panelRight step2">
@@ -437,25 +437,25 @@
         hamsterNum = hamsterType
         let text = ``
         for(let num = 0; num < equip.item.length; num++) {
-          if(!showOrNot) text += `<img src="https://jbart.joybomb.com.tw/html/nu3/20231004_adopt/assets/images/adopt_p_${equip.item[num]}_${equip.val[num]}.png" class="${equip.item[num]} equip e${equip.val[num]}">`
-          else text += `<img src="https://jbart.joybomb.com.tw/html/nu3/20231004_adopt/assets/images/adopt_p_${equip.item[num]}_${equip.val[num]}.png" class="${equip.item[num]} equip e${equip.val[num]} show">`
+          if(!showOrNot) text += `<img src="assets/images/adopt_p_${equip.item[num]}_${equip.val[num]}.png" class="${equip.item[num]} equip e${equip.val[num]}">`
+          else text += `<img src="assets/images/adopt_p_${equip.item[num]}_${equip.val[num]}.png" class="${equip.item[num]} equip e${equip.val[num]} show">`
         }
         hamster.className = `hamsterSelected${hamsterType}`
         hamster.innerHTML = `
-          <img src="https://jbart.joybomb.com.tw/html/nu3/20231004_adopt/assets/images/adopt_p_hamster_hand_${hamsterType}.png" class="hamsterRoleHand">
+          <img src="assets/images/adopt_p_hamster_hand_${hamsterType}.png" class="hamsterRoleHand">
           <div class="equipment">
             ${text}
           </div>
-          <img src="https://jbart.joybomb.com.tw/html/nu3/20231004_adopt/assets/images/adopt_p_hamster_${hamsterType}.png" class="hamsterRole">
+          <img src="assets/images/adopt_p_hamster_${hamsterType}.png" class="hamsterRole">
         `
       }
       hamsterHouseRender(hamsterNum, equip, equipNum = false)
       choiceRolePic.forEach((item, i) => {
         choiceRolePic[i].addEventListener('click', () => {
           choiceRolePic.forEach((item, j) => {
-            choiceRolePic[j].src = `https://jbart.joybomb.com.tw/html/nu3/20231004_adopt/assets/images/adopt_p_hamster_${j + 1}.png`;
+            choiceRolePic[j].src = `assets/images/adopt_p_hamster_${j + 1}.png`;
           })
-          choiceRolePic[i].src = `https://jbart.joybomb.com.tw/html/nu3/20231004_adopt/assets/images/adopt_p_hamster_${i + 1}_hover.png`;
+          choiceRolePic[i].src = `assets/images/adopt_p_hamster_${i + 1}_hover.png`;
         })
       })
       function stepButtonRender(step = 1) {
@@ -503,9 +503,9 @@
       function choiceHamsterEquipPic() {
         closetType.forEach((item, i) => {
           item.querySelectorAll('div').forEach((list, j) => {
-            list.querySelector('img').src = `https://jbart.joybomb.com.tw/html/nu3/20231004_adopt/assets/images/adopt_p_${equip.item[i]}_${j + 1}.png`;
+            list.querySelector('img').src = `assets/images/adopt_p_${equip.item[i]}_${j + 1}.png`;
             if(equip.val[i] === j + 1) {
-              list.querySelector('img').src = `https://jbart.joybomb.com.tw/html/nu3/20231004_adopt/assets/images/adopt_p_${equip.item[i]}_${equip.val[i]}_hover.png`;
+              list.querySelector('img').src = `assets/images/adopt_p_${equip.item[i]}_${equip.val[i]}_hover.png`;
             }
           })
         })
@@ -567,6 +567,7 @@
           const el = document.getElementById(targetId);
           const config = {
             quality: 1,
+            // weith: '800px',
             style: {
               // "filter": "grayscale(100%)"
             }
